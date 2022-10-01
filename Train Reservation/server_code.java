@@ -24,7 +24,7 @@ System.out.println("Received Connection:  "+soc.getInetAddress().getHostAddress(
 BufferedReader in  =  new BufferedReader(new InputStreamReader(soc.getInputStream()));
 		try{
 		Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-Connection conn=DriverManager.getConnection("jdbc:odbc:mydb","scott","tiger");
+Connection conn=DriverManager.getConnection("jdbc:odbc:mydb","<username>","<password>");
 		Statement stmt=conn.createStatement();
 		msg = in.readLine();
 		pnr = Integer.parseInt(msg);
